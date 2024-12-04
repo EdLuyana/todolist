@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StatusController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('status_create') }}">Créer un nouveau status</a>
+    <div class="wrapper">
+        {% for status in statusAll %}
+            <h2>{{ status.name }}</h2>
+        {% endfor %}
+    </div>
+{% endblock %}
+
